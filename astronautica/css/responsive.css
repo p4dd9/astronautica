@@ -1,0 +1,111 @@
+/****************************************************
+ * ASTRONAUTICA '16
+ * Major: MultiMediaTechnology - FH Salzburg
+ * Project: MultiMediaProject 1
+ * Author: Patrick Obermueller
+ * Nr.: fhs38596
+ ****************************************************/
+
+/*MEDIUM*/
+@media only screen and (max-width: 920px) {
+    #nav_bar {
+        display: none;
+    }
+
+    #header-main {
+        text-align: center;
+    }
+
+    #header-main > #profile-information {
+        position: static;
+        left: 0;
+        right: 0;
+        display: inline-block;
+    }
+
+    .intro-center {
+        margin: 0;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .welcome_box {
+        font-size: 40px;
+        top: 30%;
+    }
+
+    .intro {
+        border: 2px solid white;
+        border-left: none;
+        border-right: none;
+    }
+
+    #introduction .intro-center {
+        display: block;
+    }
+
+    #introduction .intro-area, .intro-area-side {
+        margin-bottom: 100px;
+    }
+
+    #introduction #intro-area-side-yellow {
+        margin-bottom: 0;
+    }
+
+    #header-main {
+        margin-top: 4vh;
+    }
+
+    #welcome {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #welcome > .welcome_box {
+        width: 100%;
+    }
+
+    .line_right, .line_left {
+        display: none;
+    }
+
+    header {
+        position: static;
+    }
+
+    #welcome {
+        height: calc(100vh - 150px);
+    }
+}
+
+/*SMALL*/
+@media only screen and (max-width: 570px) {
+    .intro {
+        font-size: 20px;
+    }
+
+    .welcome_box {
+        font-size: 25px;
+    }
+
+    #login-play {
+        padding: 20px;
+    }
+}
+
+/*RESPSONSIVE CREDIS*/
+@media only screen and (max-width: 810px) {
+    #closing-credits {
+        margin-top: 35px;
+        transform: none;
+        padding: 0;
+    }
+
+    #closing-credits-content {
+        font-size: 18px;
+    }
+
+    #credits-title {
+        font-size: 30px;
+    }
+}

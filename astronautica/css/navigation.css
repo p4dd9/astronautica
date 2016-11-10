@@ -1,0 +1,60 @@
+/****************************************************
+ * ASTRONAUTICA '16
+ * Major: MultiMediaTechnology - FH Salzburg
+ * Project: MultiMediaProject 1
+ * Author: Patrick Obermueller
+ * Nr.: fhs38596
+ ****************************************************/
+
+header {
+    position: fixed;
+    z-index: 999;
+    display: block;
+    padding-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: absolute;
+    display: inline-block;
+}
+
+.nav ul {
+    display: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+
+.nav ul li:hover > * {
+    text-decoration: underline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+}
+
+#nav_bar {
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+#nav_bar:hover {
+    cursor: pointer;
+}
+
+.navigation-list-items {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.show-display-block {
+    display: inline-block;
+}

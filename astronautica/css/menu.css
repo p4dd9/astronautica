@@ -1,0 +1,82 @@
+/****************************************************
+ * ASTRONAUTICA '16
+ * Major: MultiMediaTechnology - FH Salzburg
+ * Project: MultiMediaProject 1
+ * Author: Patrick Obermueller
+ * Nr.: fhs38596
+ ****************************************************/
+
+ul, ol, li, p {
+    font-family: "JuraLight", "Courier New", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+#play-astronautica-menu {
+    background-color: black;
+    padding: 60px;
+    border: 1px solid white;
+    position: absolute;
+    top: 50%;
+    list-style: none;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#play-astronautica-menu > li {
+    padding: 10px;
+}
+
+#play-astronautica-menu > :hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.area {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+#end-area-holder {
+    background-color: black;
+    position: absolute;
+    display: none;
+    text-align: center;
+    font-family: "JuraLight", "Courier New", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+#yellow {
+    background-image: url("../game/assets/yellowship.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pink {
+    background-image: url("../game/assets/pinkship.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#green {
+    background-image: url("../game/assets/greenship.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#blue {
+    background-image: url("../game/assets/blueship.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#yellow:hover, #blue:hover, #green:hover, #pink:hover {
+    cursor: pointer;
+    background-color: rgba(240, 248, 255, 0.4);
+}
