@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['HTTP_HOST'] == 'users.multimediatechnology.at') {
+if ($_SERVER['HTTP_HOST'] == '') {
     $DB_NAME = "";
     $DB_USER = "";
     $DB_PASS = "";  // fill in password here!!
