@@ -7,7 +7,7 @@ var chooseCharacter = function (playGame, graphicAssets, goToMenu) {
         switch(index) {
             case 0:
                 graphicAssets.astronautName = "astronaut";
-                graphicAssets.astronautURL = "assets/pinkship.png";
+                graphicAssets.astronautURL = "assets/characters/pinkship.png";
                 break;
             case 1:
                 graphicAssets.astronautName = graphicAssets.astronautBlueName;
@@ -40,10 +40,10 @@ var chooseCharacter = function (playGame, graphicAssets, goToMenu) {
     $character_slider.append("<ul id='slide-list'></ul>");
     $slide_list = $('#slide-list');
 
-    $slide_list.append("<li class='show'><img alt='character' src='../game/assets/pinkship.png'></li>");
-    $slide_list.append("<li ><img alt='character' src='../game/assets/blueship.png'></li>");
-    $slide_list.append("<li><img alt='character' src='../game/assets/greenship.png'></li>");
-    $slide_list.append("<li><img alt='character' src='../game/assets/yellowship.png'></li>");
+    $slide_list.append("<li class='show'><img alt='character' src='../../assets/characters/pinkship.png'></li>");
+    $slide_list.append("<li ><img alt='character' src='../../assets/characters/blueship.png'></li>");
+    $slide_list.append("<li><img alt='character' src='../../assets/characters/greenship.png'></li>");
+    $slide_list.append("<li><img alt='character' src='../../assets/characters/yellowship.png'></li>");
 
     //GET CURRENT INDEX
     var getCurrentIndex = function num_i() {

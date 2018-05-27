@@ -13,8 +13,11 @@ var profile_image_url;
 var tipp_arrow = document.getElementById('tipp-arrow');
 
 var onSignIn = function (googleUser) {
+    alert("onSignIn");
     var profile = googleUser.getBasicProfile();
     var auth1 = gapi.auth2.getAuthInstance();
+    alert(auth1);
+    alert(profile);
 
     if (auth1.isSignedIn.get()) {
         google_user_id = profile.getId();
@@ -27,7 +30,7 @@ var onSignIn = function (googleUser) {
 
     $.ajax({
             type: 'POST',
-            url: 'php/user/login.php',
+            url: '../php/user/login.php',
             data: {
                 'google-id': google_user_id,
                 'firstname': first_name,
@@ -37,7 +40,7 @@ var onSignIn = function (googleUser) {
             }
         }).done(function () {
             if(!isLoggedIn) {
-                location.reload();
+                // location.reload();
             }
     });
 
@@ -64,14 +67,15 @@ var signOutUser = function () {
     login_button.style.display = "inline-block";
 
     console.log("please");
-    $.get("php/user/logout.php").done(function () {
+    $.get("../php/user/logout.php").done(function () {
         location.reload();
     });
 };
 
 var display_user_information = function (profile) {
 
-    if (profile_image_url == undefined) {
+    console.log(profile);
+    if (profile_image_url === undefined) {
         profile_image_url = "game/assets/default_image.png";
         profile_image.style.height = "80px";
     }
@@ -87,7 +91,7 @@ var display_user_information = function (profile) {
 };
 
 var openGame = function () {
-    window.open("php/game/game.php", "_self");
+    window.open("../game.php", "_self");
 };
 
 var log_user_information = function (profile) {

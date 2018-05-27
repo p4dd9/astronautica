@@ -7,8 +7,6 @@ $(document).ready(function () {
     $soundIcon = $("#sound_icon");
     $login_music = $("#login_music");
 
-    $login_music.trigger('play');
-
     var handleSound = function (noSound) {
         if (noSound) {
             $soundIcon.attr("class", "fa fa-volume-off");
@@ -36,6 +34,7 @@ $(document).ready(function () {
             });
         }
     };
+
     handleSound(noSound);
 
     $soundIcon.click(function () {

@@ -1,7 +1,6 @@
 <?php
-    include "functions.php";
+include "functions.php";
 
-    if(isset($_POST['sound']))
-    $_SESSION['SOUND'] = $_POST['sound'];
-
+if(isset($_POST['sound']))
+$_SESSION['SOUND'] = $_POST['sound'];
 ?>

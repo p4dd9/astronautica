@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <title>ASTRONAUTICA</title>
-    <link rel="shortcut icon" type="image/png" href="game/assets/characters/blueship.png">
+    <link rel="shortcut icon" type="image/png" href="assets/characters/blueship.png">
 
     <meta name="description" content="Astronautica - An addicting highscore game.">
     <meta name="keywords"
@@ -68,7 +68,7 @@
             </div>
 
             <div id="right_content">
-                <img id="profile-image" src="">
+                <img id="profile-image" src="" onerror="if (this.src !== 'assets/landingpage/profile_pic_default.png') this.src = 'assets/landingpage/profile_pic_default.png';">
                 <i class="fa fa-volume-off" id="sound_icon" aria-hidden="true" about="start"></i>
             </div>
         </div>
@@ -84,7 +84,7 @@
             </div>
 
             <div id=\"login-play\" onclick='openGame()'>
-                <a id=\"play-button\" href='php/game/game.php'>Play Game</a>
+                <a id=\"play-button\" href='game.php'>Play Game</a>
             </div>
 
         </div>
@@ -226,9 +226,10 @@
     var noSound = <?php if(isset($_SESSION['SOUND'])) {
         echo $_SESSION['SOUND'];
     }  else {
-        echo true; // no sound
+        echo true;
     }?>;
 </script>
+
 <script src="js/main.js"></script>
 <script src="js/google-login.js"></script>
 

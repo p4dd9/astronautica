@@ -13,17 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-    <link rel="stylesheet" href="../../css/theend.css">
-    <link rel="stylesheet" href="../../css/game.css">
-    <link rel="stylesheet" href="../../css/fonts.css">
-    <link rel="stylesheet" href="../../css/characterchoice.css">
-    <link rel="stylesheet" href="../../css/pause.css">
-    <link rel="stylesheet" href="../../css/mobilecontrols.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/theend.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/characterchoice.css">
+    <link rel="stylesheet" href="css/pause.css">
+    <link rel="stylesheet" href="css/mobilecontrols.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> <!--CDN-->
 
     <?php
-        include "../functions.php";
+        include "./php/functions.php";
 
         if(!(isset($_SESSION['USER']) || isset($_SESSION['ID']))) {
             header("Location: /");
@@ -45,12 +45,12 @@
     <input type="hidden" id="this-id" name="this-id" value="<?php echo $_SESSION['ID']; ?>"/>
 </form>
 
-<script src="../../js/game/theEnd.js"></script>
-<script src="../../js/game/thePause.js"></script>
-<script src="../../js/game/theCharacters.js"></script>
-<script src="../../js/phaser.min.js"></script>
-<script src="../../js/game/game.js"></script>
-<script src="../../js/game/theMenu.js"></script>
+<script src="js/game/theEnd.js"></script>
+<script src="js/game/thePause.js"></script>
+<script src="js/game/theCharacters.js"></script>
+<script src="js/phaser.min.js"></script>
+<script src="js/game/game.js"></script>
+<script src="js/game/theMenu.js"></script>
 
 </body>
 </html>

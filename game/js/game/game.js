@@ -118,34 +118,34 @@ $(document).ready(function () {
 
     //GRAPHIC ASSETS
     var graphicAssets = {
-        astronautURL: 'assets/pinkship.png',
+        astronautURL: 'assets/characters/pinkship.png',
         astronautName: 'astronaut',
 
-        astronautYellowURL: 'assets/yellowship.png',
+        astronautYellowURL: 'assets/characters/yellowship.png',
         astronautYellowName: 'astronaut-yellow',
 
-        astronautGreenURL: 'assets/greenship.png',
+        astronautGreenURL: 'assets/characters/greenship.png',
         astronautGreenName: 'astronaut-green',
 
-        astronautBlueURL: 'assets/blueship.png',
+        astronautBlueURL: 'assets/characters/blueship.png',
         astronautBlueName: 'astronaut-blue',
 
-        asteroidPurpleURL: 'assets/asteroid_purple_64.png',
+        asteroidPurpleURL: 'assets/asteroids/asteroid_purple_64.png',
         asteroidPurpleName: 'asteroidPurple',
 
-        asteroidOrangeURL: 'assets/asteroid_orange_64.png',
+        asteroidOrangeURL: 'assets/asteroids/asteroid_orange_64.png',
         asteroidOrangeName: 'asteroidOrange',
 
-        asteroidGreenURL: 'assets/asteroid_green_64.png',
+        asteroidGreenURL: 'assets/asteroids/asteroid_green_64.png',
         asteroidGreenName: 'asteroidGreen',
 
-        asteroidRedURL: 'assets/asteroid_red_64.png',
+        asteroidRedURL: 'assets/asteroids/asteroid_red_64.png',
         asteroidRedName: 'asteroidRed',
 
-        backgroundURL: 'assets/game_bg.jpg',
+        backgroundURL: 'assets/environment/game_bg.jpg',
         backgroundName: 'background',
 
-        fuelURL: 'assets/fuel.png',
+        fuelURL: 'assets/environment/fuel.png',
         fuelName: 'fuel'
     };
 

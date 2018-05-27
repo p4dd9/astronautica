@@ -2,7 +2,7 @@ var enterEnd = function (playGame, initCharacterChoice, goToMenu, play_score, id
     var sendScore = function () {
         $.ajax({
             type: 'POST',
-            url: '../php/game/handle_new_score.php',
+            url: '../../../php/game/score_handling.php',
             data: {
                 '_score': play_score,
                 '_this-id': id
