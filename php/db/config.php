@@ -1,13 +1,14 @@
 <?php
 
-$db = parse_url(getenv("DATABASE_URL"));
-
-$pdo = new PDO("pgsql:" . sprintf(
-		"host=%s;port=%s;user=%s;password=%s;dbname=%s",
-		$db["host"],
-		$db["port"],
-		$db["user"],
-		$db["pass"],
-		ltrim($db["path"], "/")
-	));
+if ($_SERVER['HTTP_HOST'] == 'users.multimediatechnology.at') {
+    $DB_NAME = "";
+    $DB_USER = "";
+    $DB_PASS = "";  // fill in password here!!
+    $DSN     = "pgsql:dbname=$DB_NAME;host=localhost";
+} else {
+    $DB_NAME = "astronautica";
+    $DB_USER = "postgres"; // fill in your local db-username here!!
+    $DB_PASS = "postgres"; // fill in password here!!
+    $DSN     = "pgsql:dbname=$DB_NAME;host=localhost";
+}
 ?>
