@@ -1,0 +1,8 @@
+{
+  "name": "p4dd9/astronautica",
+  "description": "HTML5 WebGame",
+  "license": "MIT",
+  "require": {
+    "php": "7.0.27"
+  }
+}
