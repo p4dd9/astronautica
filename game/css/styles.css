@@ -1,0 +1,327 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url("../assets/landingpage/landingpage_bg.jpg");
+    background-repeat: repeat;
+}
+
+#tipp-arrow {
+    position: absolute;
+    top: 119%;
+    left: -45%;
+    transform: rotateZ(-45deg);
+    font-size: 50px;
+}
+
+button {
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, nav, ul, li, a, i, p, span, td, tr, th, caption {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "JuraLight", "Courier New", sans-serif;
+    text-decoration: none;
+}
+
+.highlight-color {
+    color: #4285F4;
+}
+
+.holder {
+    background: transparent;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#my-score > td {
+    font-family: "JuraLight", "Courier New", sans-serif;
+    font-weight: bold;
+    color: gold;
+}
+
+.holder > div {
+    vertical-align: top;
+}
+
+#play-button:hover {
+    font-weight: bold;
+}
+
+.template-section {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    height: calc(100vh - 40px);
+    display: block;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+#introduction, #highscore, #credits {
+    padding-top: 83px;
+    padding-bottom: 150px;
+    display: block;
+    background: transparent;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#credits {
+    min-height: 740px;
+    box-sizing: border-box;
+    padding-bottom: 0px;
+}
+
+.circle-score {
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.circle-score > p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-family: "JuraReg", "Courier New", sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+#first-place {
+    width: 300px;
+    height: 300px;
+    background-color: #FFDB4D;
+}
+
+#second-place {
+    width: 200px;
+    height: 200px;
+    background-color: #AFCBEE;
+}
+
+#third-place {
+    width: 125px;
+    height: 125px;
+    background-color: #F5BACC;
+}
+
+section > h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.intro-area-side, .intro-center {
+    display: inline-block;
+}
+
+.intro-area-side {
+    width: 250px;
+}
+
+#play-button {
+    color: #4285f4;
+    padding: 20px;
+}
+
+#play-button:hover {
+    /*text-decoration: underline;*/
+    cursor: pointer;
+}
+
+.intro-center {
+    vertical-align: top;
+    margin: 100px;
+}
+
+.intro-center > * {
+    font-size: 50px;
+}
+
+.intro-area-side > p, .intro-area > p {
+    margin: 20px;
+}
+
+/*Center Game*/
+#astronautica canvas {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+/*Side Function, sound, facebook, ...*/
+#sound_icon {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    top: -12px;
+    width: 20px;
+}
+
+#profile-information {
+    position: absolute;
+    right: 15px;
+    display: inline-block;
+}
+
+#profile-image {
+    border-radius: 100%;
+    height: 80%;
+    border: 2px solid white;
+    display: none;
+}
+
+#profile-name {
+    display: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#sound_icon:hover {
+    cursor: pointer;
+}
+
+#to-introduction-scroller:hover, #to-highscore-scroller:hover, #to-credits-scroller:hover {
+    cursor: pointer;
+}
+
+#gotop {
+    position: fixed;
+    top: 80vh;
+    right: 0;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px;
+    text-decoration: none;
+    display: none;
+    z-index: 999;
+}
+
+#gotop > p {
+    color: #4285f4;
+    font-family: "JuraReg", "Courier New", sans-serif;
+}
+
+#gotop:hover {
+    cursor: pointer;
+}
+
+.logo {
+    display: inline-block;
+}
+
+#welcome > .welcome_box {
+    display: inline-block;
+}
+
+#welcome {
+    min-height: 400px;
+}
+
+.welcome_box {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left_content {
+    display: inline-block;
+    transform: translateY(-20%);
+}
+
+#right_content {
+    display: inline-block;
+}
+
+/*LOGIN_STUFF*/
+#login-button {
+    display: inline-block;
+    margin-right: 17px;
+}
+
+#logout_button {
+    display: none;
+    border: none;
+    font-size: 25px;
+    position: relative;
+    top: -5px;
+}
+
+#logout_button > i {
+}
+
+#logout_button:hover {
+    cursor: pointer;
+}
+
+.intro {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: 2px solid white;
+}
+
+.intro_play {
+    padding: 10px;
+    font-size: 40px;
+
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.intro_play > a {
+    text-decoration: none;
+    display: block;
+}
+
+.down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 15px;
+    transform: translateX(-50%);
+    color: #4285f4;
+}
+
+.down:hover {
+    color: black;
+    background-color: white;
+}
+
+.line_left, .line_right {
+    border: 1px solid white;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    width: 30%;
+    position: absolute;
+    bottom: 70px;
+}
+
+.line_left {
+    right: 55%
+}
+
+.line_right {
+    left: 55%;
+}
