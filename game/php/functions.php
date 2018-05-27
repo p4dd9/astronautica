@@ -5,7 +5,7 @@ if (!isset($_SESSION['USER']) && !isset($_SESSION['ID'])) {
 
 try {
 	$dsn = "pgsql:"
-	       . "host=eec2-54-83-204-6.compute-1.amazonaws.com"
+	       . "host=ec2-54-83-204-6.compute-1.amazonaws.com"
 	       . "dbname=d2etb958b2n1bs;"
 	       . "user=lalxvbsluyzclg;"
 	       . "port=5432;"
