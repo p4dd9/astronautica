@@ -4,19 +4,14 @@ if (!isset($_SESSION['USER']) && !isset($_SESSION['ID'])) {
 }
 
 try {
-	$db = parse_url(getenv("DATABASE_URL"));
+	$dsn = "pgsql:"
+	       . "host=eec2-54-83-204-6.compute-1.amazonaws.com"
+	       . "dbname=d2etb958b2n1bs;"
+	       . "user=lalxvbsluyzclg;"
+	       . "port=5432;"
+	       . "password=ef39ee9f480c34b45d3a4e99ebbbd84d5158de0393e4ebbf07a370ee0e5465f5";
 
-	$pdo = new PDO("pgsql:" . sprintf(
-			"host=%s;port=%s;user=%s;password=%s;dbname=%s",
-			$db["host"],
-			$db["port"],
-			$db["user"],
-			$db["pass"],
-			ltrim($db["path"], "/")
-		));
-
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+	$db = new PDO($dsn);
 
 } catch (Exception $e) {
     die("Problem connecting to database: " . $e->getMessage());
