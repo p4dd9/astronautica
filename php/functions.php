@@ -3,8 +3,6 @@ if (!isset($_SESSION['USER']) && !isset($_SESSION['ID'])) {
     session_start();
 }
 
-include "db/config.php";
-
 try {
 	$db = parse_url(getenv("DATABASE_URL"));
 
@@ -20,6 +18,6 @@ try {
 	$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
 } catch (Exception $e) {
-    die("Problem connecting to database $DB_NAME as $DB_USER: " . $e->getMessage());
+    die("Problem connecting to database: " . $e->getMessage());
 }
 ?>
