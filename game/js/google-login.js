@@ -13,11 +13,8 @@ var profile_image_url;
 var tipp_arrow = document.getElementById('tipp-arrow');
 
 var onSignIn = function (googleUser) {
-    alert("onSignIn");
     var profile = googleUser.getBasicProfile();
     var auth1 = gapi.auth2.getAuthInstance();
-    alert(auth1);
-    alert(profile);
 
     if (auth1.isSignedIn.get()) {
         google_user_id = profile.getId();
@@ -26,6 +23,7 @@ var onSignIn = function (googleUser) {
         email = profile.getEmail();
         profile_image_url = profile.getImageUrl();
         display_user_information(profile);
+        log_user_information(profile);
     }
 
     $.ajax({

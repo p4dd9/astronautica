@@ -27,7 +27,8 @@
           content="489958636717-uqdvoh3uh3mubbrrs62cklnk11tfs0a2.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <?php include "php/user/login.php" ?>
+	<?php include "php/user/login.php" ?>
+	<?php include "php/functions.php" ?>
 
 </head>
 
@@ -138,11 +139,47 @@
                     <th>PLACE</th>
                     <th>SPIELERNAME</th>
                     <th>SCORE</th>
+	                <?php
+
+	                $sth = $dbh->query( "SELECT max(game.score) as score, player.firstname, player.lastname, player.id
+                                FROM player FULL JOIN game
+                                    ON (player.id = game.played_by_id)
+                                WHERE score IS NOT NULL
+                                GROUP BY player.firstname, player.lastname, player.id
+                                ORDER BY score
+                                DESC LIMIT 20;
+                                " );
+
+	                $score_objects = $sth->fetchAll();
+
+	                $i = 1;
+
+	                foreach ( $score_objects as $score_object ) {
+		                $firstname = htmlspecialchars( $score_object->firstname );
+		                $lastname  = htmlspecialchars( $score_object->lastname );
+		                $score     = htmlspecialchars( $score_object->score );
+		                $user_id   = htmlspecialchars( $score_object->id );
+		                while ( $i <= 20 ) {
+			                if ( isset( $_SESSION['ID'] ) && $user_id === $_SESSION['ID'] ) {
+				                echo "<tr><td class='$user_id'>$i." . "</td><td class='$user_id'>$firstname $lastname</td><td class='$user_id'>$score</td></tr>";
+			                } else {
+				                echo "<tr><td>$i." . "</td><td>$firstname $lastname</td><td>$score</td></tr>";
+			                }
+			                $i ++;
+			                break 1;
+		                }
+	                }
+
+	                while ( $i <= 20 ) {
+		                echo "<tr>
+                                <td>$i." . "</td>
+                                <td> - </td>
+                                <td> - </td>
+                              </tr>";
+		                $i ++;
+	                }
+	                ?>
                 </tr>
-                <tr><td class=''>1</td><td class=''>Dummy Peter</td><td class=''>2350</td></tr>
-                <tr><td class=''>2</td><td class=''>Dummy Peter</td><td class=''>2350</td></tr>
-                <tr><td class=''>3</td><td class=''>Dummy Peter</td><td class=''>2350</td></tr>
-                <tr><td class=''>...</td><td class=''>...</td><td class=''>...</td></tr>
             </table>
         </div>
 
