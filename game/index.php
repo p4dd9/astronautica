@@ -84,8 +84,14 @@
             <div class="intro"><h2>ASTRONAUTICA</h2>
             </div>
 
-            <div id=\"login-play\" onclick='openGame()'>
-                <a id=\"play-button\" href='game.php'>Play Game</a>
+            <div id="login-play">
+                <?php
+                if (!(isset($_SESSION['ID']))) {
+	                echo "Login via <strong>Google</strong> to play";
+                } else {
+	                echo "<a id=\"play-button\" href='game.php' onclick='openGame()'>Play Game</a>";
+                }
+                ?>
             </div>
 
         </div>

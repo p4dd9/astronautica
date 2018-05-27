@@ -12,27 +12,19 @@ $(document).ready(function () {
             $soundIcon.attr("class", "fa fa-volume-off");
             $login_music.trigger('pause');
             noSound = true;
-
-            $.ajax({
-                type: 'POST',
-                url: 'php/handleSound.php',
-                data: {
-                    'sound': noSound
-                }
-            });
         } else {
             $soundIcon.attr("class", "fa fa-volume-up");
             $login_music.trigger('play');
             noSound = false;
-
-            $.ajax({
-                type: 'POST',
-                url: 'php/handleSound.php',
-                data: {
-                    'sound': noSound
-                }
-            });
         }
+
+        $.ajax({
+            type: 'POST',
+            url: '../php/handleSound.php',
+            data: {
+                'sound': noSound
+            }
+        });
     };
 
     handleSound(noSound);
