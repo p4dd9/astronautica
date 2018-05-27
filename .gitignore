@@ -6,6 +6,7 @@
 .idea/tasks.xml
 .idea
 config.php
+vendor/
 
 # Sensitive or high-churn files:
 .idea/dataSources/
