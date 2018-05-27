@@ -7,7 +7,7 @@ include "../functions.php";
         $id = $_POST["_this-id"];
         $myScore = $_POST["_score"];
 
-        $sth = $db->prepare("SELECT
+        $sth = $dbh->prepare("SELECT
                               game.score
                             FROM game
                             WHERE game.played_by_id = ?
@@ -16,7 +16,7 @@ include "../functions.php";
         $score_object = $sth->fetch();
 
         if ($score_object === false) {
-            $sth = $db->prepare("INSERT INTO game(played_by_id, score) VALUES (?, ?)");
+            $sth = $dbh->prepare("INSERT INTO game(played_by_id, score) VALUES (?, ?)");
             $update_went_ok = $sth->execute(
                 array(
                     $id,
@@ -26,7 +26,7 @@ include "../functions.php";
         }
 
         else if($score_object->score < $myScore){
-                $sth = $db->prepare("UPDATE game SET score=? WHERE played_by_id=?");
+                $sth = $dbh->prepare("UPDATE game SET score=? WHERE played_by_id=?");
                 $update_went_ok = $sth->execute(
                     array(
                         $myScore,
