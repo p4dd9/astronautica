@@ -8,12 +8,12 @@ if (isset($_POST["google-id"]) && (isset($_POST["firstname"])) && (isset($_POST[
 
 	$id = $_POST["google-id"];
 
-	$sth = $dbh->query("SELECT * FROM player WHERE player.id = '$id'");
+	$sth = $$db->query("SELECT * FROM player WHERE player.id = '$id'");
 	$results = $sth->fetchAll();
 
 	if (!$results) { // not first time play
 
-		$sth = $dbh->prepare("INSERT INTO player(id, firstname, lastname, username, email) VALUES (?,?,?,?,?)");
+		$sth = $$db->prepare("INSERT INTO player(id, firstname, lastname, username, email) VALUES (?,?,?,?,?)");
 
 		$id = strip_tags($_POST['google-id']);
 		$firstname = strip_tags($_POST['firstname']);

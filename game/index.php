@@ -147,7 +147,7 @@
                     <th>SCORE</th>
 	                <?php
 
-	                $sth = $dbh->query( "SELECT max(game.score) as score, player.firstname, player.lastname, player.id
+	                $sth = $$db->query( "SELECT max(game.score) as score, player.firstname, player.lastname, player.id
                                 FROM player FULL JOIN game
                                     ON (player.id = game.played_by_id)
                                 WHERE score IS NOT NULL
