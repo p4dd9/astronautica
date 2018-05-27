@@ -325,3 +325,8 @@ section > h2 {
 .line_right {
     left: 55%;
 }
+
+#login-play {
+    color: white;
+    font-family: "JuraLight", "Courier New", sans-serif;
+}
