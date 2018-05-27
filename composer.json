@@ -3,6 +3,7 @@
   "description": "HTML5 WebGame",
   "license": "MIT",
   "require": {
-    "php": "7.0.27"
+    "php": "7.0.27",
+    "csanquer/pdo-service-provider": "~1.1dev"
   }
 }
