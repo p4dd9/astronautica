@@ -72,7 +72,6 @@ var signOutUser = function () {
 
 var display_user_information = function (profile) {
 
-    console.log(profile);
     if (profile_image_url === undefined) {
         profile_image_url = "game/assets/default_image.png";
         profile_image.style.height = "80px";
