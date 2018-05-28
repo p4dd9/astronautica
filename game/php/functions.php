@@ -3,16 +3,19 @@ if (!isset($_SESSION['USER']) && !isset($_SESSION['ID'])) {
     session_start();
 }
 
-include "db/config.php";
-
-if (!$DB_NAME) die('please create config.php, define $DB_NAME, $DB_USER, $DB_PASS there');
-
 try {
-    $dbh = new PDO($DSN, $DB_USER, $DB_PASS);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+	$db = parse_url(getenv("DATABASE_URL"));
+
+	$pdo = new PDO("pgsql:" . sprintf(
+			"host=%s;port=%s;user=%s;password=%s;dbname=%s",
+			$db["host"],
+			$db["port"],
+			$db["user"],
+			$db["pass"],
+			ltrim($db["path"], "/")
+		));
 
 } catch (Exception $e) {
-    die("Problem connecting to database $DB_NAME as $DB_USER: " . $e->getMessage());
+    die("Problem connecting to database: " . $e->getMessage());
 }
 ?>

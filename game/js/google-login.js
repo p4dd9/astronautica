@@ -38,7 +38,7 @@ var onSignIn = function (googleUser) {
             }
         }).done(function () {
             if(!isLoggedIn) {
-                // location.reload();
+                location.reload();
             }
     });
 
