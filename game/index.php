@@ -89,7 +89,7 @@
                 if (!(isset($_SESSION['ID']))) {
 	                echo "Login via <strong>Google</strong> to play";
                 } else {
-	                echo " href='game.php' onclick='openGame()'>Play Game</a>";
+	                echo "<a href='game.php' onclick='openGame()'>Play Game</a>";
                 }
                 ?>
             </div>
