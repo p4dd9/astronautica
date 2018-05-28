@@ -1,6 +1,6 @@
 <?php
-
-include(__DIR__ . '/functions.php');
+define('ROOT_PATH', dirname(__DIR__) . '/');
+include(ROOT_PATH .'php/functions.php');
 
 if (isset($_POST["google-id"]) && (isset($_POST["firstname"])) && (isset($_POST["lastname"]))) {
     $_SESSION['USER'] = $_POST["firstname"];
