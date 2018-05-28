@@ -165,6 +165,11 @@
 		                $lastname  = htmlspecialchars( $score_object->lastname );
 		                $score     = htmlspecialchars( $score_object->score );
 		                $user_id   = htmlspecialchars( $score_object->id );
+
+		                var_dump($score_object);
+		                var_dump(isset( $_SESSION['ID']));
+		                var_dump($user_id === $_SESSION['ID']);
+
 		                while ( $i <= 20 ) {
 			                if ( isset( $_SESSION['ID'] ) && $user_id === $_SESSION['ID'] ) {
 				                echo "<tr><td class='$user_id'>$i." . "</td><td class='$user_id'>$firstname $lastname</td><td class='$user_id'>$score</td></tr>";

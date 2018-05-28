@@ -23,7 +23,7 @@ var onSignIn = function (googleUser) {
         email = profile.getEmail();
         profile_image_url = profile.getImageUrl();
         display_user_information(profile);
-        log_user_information(profile);
+        // log_user_information(profile);
     }
 
     $.ajax({
