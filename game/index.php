@@ -154,7 +154,7 @@
                                 GROUP BY player.firstname, player.lastname, player.id
                                 ORDER BY score
                                 DESC LIMIT 20;
-                                " );
+                                ", PDO::FETCH_ASSOC);
 
 	                $score_objects = $sth->fetchAll();
 
