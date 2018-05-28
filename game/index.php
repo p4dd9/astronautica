@@ -147,14 +147,14 @@
                     <th>SCORE</th>
 	                <?php
 
-	                $sth = $db->query( "SELECT max(game.score) as score, player.firstname, player.lastname, player.id
+	                $sth = $pdo->query( "SELECT max(game.score) as score, player.firstname, player.lastname, player.id
                                 FROM player FULL JOIN game
                                     ON (player.id = game.played_by_id)
                                 WHERE score IS NOT NULL
                                 GROUP BY player.firstname, player.lastname, player.id
                                 ORDER BY score
                                 DESC LIMIT 20;
-                                ", PDO::FETCH_ASSOC);
+                                ");
 
 	                $score_objects = $sth->fetchAll();
 
