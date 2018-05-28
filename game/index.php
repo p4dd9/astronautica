@@ -27,8 +27,8 @@
           content="489958636717-uqdvoh3uh3mubbrrs62cklnk11tfs0a2.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-	<?php include "php/user/login.php" ?>
-	<?php include "php/functions.php" ?>
+	<?php include "./php/user/login.php" ?>
+	<?php include "./php/functions.php" ?>
 
 </head>
 
