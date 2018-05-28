@@ -1,6 +1,6 @@
 <?php
 
-include "../functions.php";
+include "./php/functions.php";
 
 if (isset($_POST["google-id"]) && (isset($_POST["firstname"])) && (isset($_POST["lastname"]))) {
     $_SESSION['USER'] = $_POST["firstname"];
