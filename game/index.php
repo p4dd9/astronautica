@@ -169,6 +169,11 @@
 		                var_dump($score_object);
 		                var_dump(isset( $_SESSION['ID']));
 		                var_dump($user_id === $_SESSION['ID']);
+		                var_dump($firstname);
+		                var_dump($firstname);
+		                var_dump($lastname);
+		                var_dump($score);
+		                var_dump($user_id);
 
 		                while ( $i <= 20 ) {
 			                if ( isset( $_SESSION['ID'] ) && $user_id === $_SESSION['ID'] ) {
