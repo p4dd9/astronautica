@@ -162,18 +162,9 @@
 
 	                foreach ( $score_objects as $score_object ) {
 		                $firstname = htmlspecialchars( $score_object['firstname'],ENT_QUOTES);
-		                $lastname  = htmlspecialchars( $score_object->lastname,ENT_QUOTES );
-		                $score     = htmlspecialchars( $score_object->score,ENT_QUOTES );
-		                $user_id   = htmlspecialchars( $score_object->id,ENT_QUOTES );
-
-		                var_dump($score_object);
-		                var_dump(isset( $_SESSION['ID']));
-		                var_dump($user_id === $_SESSION['ID']);
-		                var_dump($score_object->firstname);
-		                var_dump($firstname);
-		                var_dump($lastname);
-		                var_dump($score);
-		                var_dump($user_id);
+		                $lastname  = htmlspecialchars( $score_object['lastname'],ENT_QUOTES );
+		                $score     = htmlspecialchars( $score_object['score'],ENT_QUOTES );
+		                $user_id   = htmlspecialchars( $score_object['user_id'],ENT_QUOTES );
 
 		                while ( $i <= 20 ) {
 			                if ( isset( $_SESSION['ID'] ) && $user_id === $_SESSION['ID'] ) {
