@@ -4,7 +4,6 @@ if (!isset($_SESSION['USER']) && !isset($_SESSION['ID'])) {
 }
 
 try {
-	global $db;
 	$db = parse_url(getenv("DATABASE_URL"));
 
 	$pdo = new PDO("pgsql:" . sprintf(

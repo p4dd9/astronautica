@@ -17,23 +17,28 @@ $(document).ready(function () {
     var right_button;
     var up_button;
 
-    var initMobileControls = function () {
+    var initMobileControls = function (astronaut) {
         $game_canvas.append("<div id='mobile-controls'></div>");
 
-        $mobile_controls = $('#mobile-controls');
-
-        $mobile_controls.append(createControlButton('go-left', astronaut.body.moveLeft(400)));
-        $mobile_controls.append(createControlButton('go-right', astronaut.body.moveRight(400)));
-        $mobile_controls.append(createControlButton('go-up'));
+        createControlButton('go-left');
+        createControlButton('go-right');
+        createControlButton('go-up');
     };
 
     var createControlButton = function(btnID, movement) {
+        $mobile_controls = $('#mobile-controls');
+
         var button = document.createElement('button');
         button.id = btnID;
 
+        $mobile_controls.append(button);
+
         button.addEventListener('touchstart', function () {
             GameState.boost();
-            movement;
+            if (this.id === 'go-left')
+                astronaut.body.moveLeft(400);
+            else if (this.id === 'go-right')
+                astronaut.body.moveRight(400);
         });
     };
 
@@ -42,8 +47,8 @@ $(document).ready(function () {
         $game_canvas_real = $('#astronautica > canvas');
         $game_canvas_real.css('display', 'inline-block');
 
-        if (isMobile && ($(document).width() < 600)) {
-            game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT; //Stretched to full size
+        if (isMobile || ($(document).width() < 600)) {
+            game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL; // Stretched to full size
         }
         else {
             game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -310,6 +315,10 @@ $(document).ready(function () {
 
             this.initCharacter();
 
+            if (isMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                initMobileControls(astronaut)
+            }
+
             //SPAWN ASTEROIDS
             game.time.events.add(Phaser.Timer.SECOND * 0.2, this.generateAsteroidRow, this);
             game.time.events.add(Phaser.Timer.SECOND * 8, this.generateFuelItem, this);
@@ -392,9 +401,6 @@ $(document).ready(function () {
             this.initHUD(current_fuel);
             current_score = 0;
             game.paused = true;
-            if (isMobile) {
-                initMobileControls();
-            }
         },
 
         initHUD: function (fuel_tank) {
