@@ -84,9 +84,8 @@ $(document).ready(function () {
         }
     });
 
-    document.addEventListener("touchstart", function funcref(e) {
+    document.addEventListener("touchstart", function (e) {
         goFullScreen();
-        e.preventDefault();
 
         if (!isMobile) {
             isMobile = true;
@@ -96,7 +95,7 @@ $(document).ready(function () {
             game.paused = false;
         }
 
-        document.removeEventListener("touchstart", funcref, false);
+        e.preventDefault();
     });
 
     //GAME STUFF
