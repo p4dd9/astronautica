@@ -25,7 +25,7 @@ include "../functions.php";
             );
         }
 
-        else if($score_object->score < $myScore){
+        else if($score_object['score'] < $myScore){
                 $sth = $pdo->prepare("UPDATE game SET score=? WHERE played_by_id=?");
                 $update_went_ok = $sth->execute(
                     array(
