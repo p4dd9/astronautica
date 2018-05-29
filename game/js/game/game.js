@@ -48,7 +48,7 @@ $(document).ready(function () {
         $game_canvas_real.css('display', 'inline-block');
 
         if (isMobile || ($(document).width() < 600)) {
-            game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL; // Stretched to full size
+            game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT; // Stretched to full size
         }
         else {
             game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -75,7 +75,7 @@ $(document).ready(function () {
     document.addEventListener('keydown', function (event) {
         if (event.keyCode == 13) {
             goFullScreen();
-        }
+        }init
     });
 
     document.addEventListener('keydown', function (event) {
@@ -84,8 +84,9 @@ $(document).ready(function () {
         }
     });
 
-    document.addEventListener("touchstart", function () {
+    document.addEventListener("touchstart", function funcref(e) {
         goFullScreen();
+        e.preventDefault();
 
         if (!isMobile) {
             isMobile = true;
@@ -94,6 +95,8 @@ $(document).ready(function () {
         if (!isMobileStart) {
             game.paused = false;
         }
+
+        document.removeEventListener("touchstart", funcref, false);
     });
 
     //GAME STUFF
