@@ -75,7 +75,7 @@ $(document).ready(function () {
     document.addEventListener('keydown', function (event) {
         if (event.keyCode == 13) {
             goFullScreen();
-        }init
+        }
     });
 
     document.addEventListener('keydown', function (event) {
