@@ -95,7 +95,6 @@ $(document).ready(function () {
             game.paused = false;
         }
 
-        e.preventDefault();
     });
 
     //GAME STUFF
