@@ -48,7 +48,7 @@ $(document).ready(function () {
         $game_canvas_real.css('display', 'inline-block');
 
         if (isMobile || ($(document).width() < 600)) {
-            game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT; // Stretched to full size
+            game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL; // Stretched to full size
         }
         else {
             game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
