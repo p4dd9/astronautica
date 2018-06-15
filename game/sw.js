@@ -22,3 +22,9 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request)
+    );
+});
