@@ -8,6 +8,19 @@ if ('serviceWorker' in navigator) {
             console.log('ServiceWorker registration failed: ', err);
         });
     });
+
+    let installPromptEvent;
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+        // Prevent Chrome <= 67 from automatically showing the prompt
+        event.preventDefault();
+        // Stash the event so it can be triggered later.
+        installPromptEvent = event
+        console.log("beforeinstallprompt - Event")
+        console.log(event)
+        // Update the install UI to notify the user app can be installed
+        event.prompt()
+    });
 }
 
 self.addEventListener('fetch', function(event) {
@@ -16,15 +29,3 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
-let installPromptEvent;
-
-window.addEventListener('beforeinstallprompt', (event) => {
-    // Prevent Chrome <= 67 from automatically showing the prompt
-    event.preventDefault();
-    // Stash the event so it can be triggered later.
-    installPromptEvent = event
-    console.log("beforeinstallprompt - Event")
-    console.log(event)
-    // Update the install UI to notify the user app can be installed
-    event.prompt()
-});
