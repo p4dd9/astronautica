@@ -19,7 +19,7 @@ if ('serviceWorker' in navigator) {
         console.log("beforeinstallprompt - Event")
         console.log(event)
         // Update the install UI to notify the user app can be installed
-        event.prompt()
+        installPromptEvent.prompt()
     });
 }
 
