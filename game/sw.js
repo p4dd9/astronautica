@@ -10,7 +10,9 @@ if ('serviceWorker' in navigator) {
                 // Prevent Chrome <= 67 from automatically showing the prompt
                 event.preventDefault();
                 // Stash the event so it can be triggered later.
-                installPromptEvent = event;
+                installPromptEvent = event
+                console.log("beforeinstallprompt - Event")
+                console.log(event)
                 // Update the install UI to notify the user app can be installed
                 event.prompt()
             });
