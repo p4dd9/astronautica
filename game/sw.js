@@ -10,9 +10,8 @@ if ('serviceWorker' in navigator) {
     let installPromptEvent;
 
     window.addEventListener('beforeinstallprompt', (event) => {
-        event.preventDefault()
-        installPromptEvent = event
-        installPromptEvent.prompt()
+          deferredPrompt = e;
+          showInstallPromotion();
     });
 }
 
