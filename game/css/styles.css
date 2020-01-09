@@ -7,6 +7,12 @@ html, body {
     background-repeat: repeat;
 }
 
+.add-button {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
 #tipp-arrow {
     position: absolute;
     top: 119%;

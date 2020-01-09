@@ -39,6 +39,7 @@
 <div class="holder">
     <header id="header-main">
 
+        <button class="add-button">Add to home screen</button>
         <!--NAVIGATION-->
         <nav class="nav">
             <i class="fa fa-bars" id="nav_bar" aria-hidden="true"></i>
